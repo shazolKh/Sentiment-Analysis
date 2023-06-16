@@ -18,7 +18,9 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-RUN  git lfs clone https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest ./model/
+RUN cd ./model && \
+    git lfs clone https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest && \
+    cd ..
 
 EXPOSE 8000
 
