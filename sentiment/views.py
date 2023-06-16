@@ -9,6 +9,10 @@ from transformers import pipeline
 
 from .extended_schema import sentimentAnalyseResponseSchema
 
+from transformers import logging
+
+logging.set_verbosity_warning()  # Disabling some warning messages
+
 
 # Define the view and extend the schema for POST method on swagger doc
 @extend_schema_view(
