@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     env_file: .env
-    restart: no
+    restart: always
     volumes:
       - model_volume:/usr/src/app/model
     ports:
