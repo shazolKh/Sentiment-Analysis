@@ -10,7 +10,7 @@ services:
     volumes:
       - model_volume:/usr/src/app/model
     ports:
-      - "80:8000"
+      - "8000:8000"
 
 volumes:
   model_volume:
