@@ -27,6 +27,9 @@ INSTALLED_APPS = [
     # third-party apps
     'rest_framework',
     'drf_spectacular',
+
+    # custom apps
+    'sentiment',
 ]
 
 MIDDLEWARE = [
