@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file: .env
+    restart: no
+    volumes:
+      - model_volume:/usr/src/app/model
+    ports:
+      - "80:8000"
+
+volumes:
+  model_volume:
