@@ -46,7 +46,7 @@ After that, the API can be tested with API testing tool or at `docs/` endpoint w
 
 ### Manual Setup
 Assuming you have completed the necessary setup to perform `python` related commands. And also assuming
-that you are using a linux computer. Use the following commands to run the project. 
+that you are using a linux computer or you are using `WSL` on windows. Use the following commands to run the project. 
 Noted that, at least, python 3.8 is needed.
 
 1. `apt update`
@@ -60,8 +60,9 @@ Noted that, at least, python 3.8 is needed.
 9. Change the working directory to `model/` folder.
 10. `git lfs clone https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment-latest`
 11. Change the working directory back to `Sentiment-Analysis/` i.e. project root folder.
-12. `python manage.py migrate`
-13. `python manage.py runserver`
+12. `cp .env.example .env` and put some random text as the value of `SECRET_KEY` at `.env` file.
+13. `python manage.py migrate`
+14. `python manage.py runserver`
 
 The project will be available at `http://127.0.0.1:8000`. And the API can be tested with API testing tool or 
 at `docs/` endpoint with **Swagger**.
